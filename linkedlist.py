@@ -30,6 +30,8 @@ class LinkedList:
             self.tail.next = node
             self.tail = node
 
+        self.size += 1
+
     def find(self, obj):
         node = self.head
 
@@ -61,6 +63,8 @@ class LinkedList:
             self.tail = node
         else:
             node.next = node.next.next
+
+        self.size -= 1
 
         return 0
 
